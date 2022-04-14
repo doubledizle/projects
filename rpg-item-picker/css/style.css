@@ -1,0 +1,36 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  height: 100px;
+}
+
+body {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  align-self: center;
+  padding: 1rem;
+  width: 400px;
+  border: 1px solid #0037ff;
+  border-radius: 10px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
