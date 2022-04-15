@@ -1,0 +1,118 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/* div {
+  border: 1px solid gray;
+} */
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.hidden{
+	display: none;
+}
+
+.not-hidden{
+  display:block;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(111,0,0,1);
+}
+
+
+.grid {
+  display: grid;
+	height: 895px;
+  width: 590px;
+  padding: 8px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+  grid-gap: 8px;
+  background-image: url("../sf4-char-select.jpg");
+  background-repeat: none;
+}
+
+.blank {
+  grid-column: 2 / span 3;
+	grid-row: 4 / span 1;
+  background: transparent;
+}
+
+div > div:hover {
+  cursor: pointer;  
+}
+
+section {
+  background-color: white;
+  width: 25%;
+  height: 80%;
+  margin: 5%;
+  padding: 2%;
+  border: 10px solid black;
+  border-radius: 30px;
+}
+
+
+
+/* .grid_one_one {
+  grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+  background: transparent;
+}
+
+.grid_one_two {
+  grid-column: 1 / span 1;
+	grid-row: 2 / span 1;
+  background: transparent;
+}
+
+.grid_one_three {
+  grid-column: 1 / span 1;
+	grid-row: 3 / span 1;
+  background: transparent;
+}
+
+.grid_one_four {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+  background: transparent;
+}
+
+.grid_one_five {
+    grid-column: 1 / span 1;
+		grid-row: 5 / span 1;
+    background: transparent;
+}
+
+.grid_one_six {
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+  background: transparent;
+}
+
+.grid_one_seven {
+  grid-column: 1 / span 1;
+  grid-row: 7 / span 1;
+  background: transparent;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
