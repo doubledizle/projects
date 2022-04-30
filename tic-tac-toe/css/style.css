@@ -1,0 +1,93 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+     box-sizing: border-box;
+}
+
+/* div {
+border: 1px solid gray;
+} */
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.hidden{
+     display: none;
+}
+
+.not-hidden{
+     display:block;
+}
+
+html,
+body {
+     height: 100%;
+     font-family: 'Roboto', sans-serif;
+}
+
+body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(0, 115, 255);
+}
+
+
+.grid {
+     display: grid;
+     height: 400px;
+     width: 400px;
+     padding: 8px;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     grid-gap: 8px;
+     background-color: rgb(210, 210, 210);
+     background-repeat: none;
+     border: 1px solid black
+}
+
+.blank {
+     grid-column: 2 / span 3;
+     grid-row: 4 / span 1;
+     background: transparent;
+}
+
+div {
+     border: 1px solid black;
+}
+
+div > div:hover {
+     cursor: pointer;  
+}
+
+.box {
+     display: flex;
+     color: black;
+     font-size:80px;
+     align-items: center;
+     justify-content: center;
+     background-color: white;
+}
+
+#message {
+     display: flex;
+     color: black;
+     font-size:50px;
+     align-items: center;
+     justify-content: center;
+}
+
+/* section {
+     background-color: white;
+     width: 25%;
+     height: 80%;
+     margin: 5%;
+     padding: 2%;
+     border: 10px solid black;
+     border-radius: 30px;
+} */
