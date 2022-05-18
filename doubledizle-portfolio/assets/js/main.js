@@ -99,7 +99,7 @@ window.onload = () => {
 // GREENSOCK - GSAP
 
 gsap.utils.toArray(".col-4").forEach(col => {
-  let hover = gsap.to(col, {scale: 1.07, duration: .4, paused: true, ease: "power1.inOut"}) // Set scale and speed here
+  let hover = gsap.to(col, {scale: 1.05, duration: .3, paused: true, ease: "power1.inOut"}) // Set scale and speed here
   col.addEventListener("mouseenter", () => hover.play()) // Plays the animation on hover
   col.addEventListener("mouseleave", () => hover.reverse()) // Reverses the animation on exit
 })
