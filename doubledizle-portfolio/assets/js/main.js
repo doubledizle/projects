@@ -1,11 +1,3 @@
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-
-
 // Template functions
 
 (function($) {
@@ -103,5 +95,3 @@ gsap.utils.toArray(".col-4").forEach(col => {
   col.addEventListener("mouseenter", () => hover.play()) // Plays the animation on hover
   col.addEventListener("mouseleave", () => hover.reverse()) // Reverses the animation on exit
 })
-
-
