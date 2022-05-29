@@ -139,34 +139,17 @@
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Let me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+						<h2>Let me build something for you!</h2>
 					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
+					<div class="email-form">
+						<form action="https://getform.io/f/7fe69bf4-8b1f-4c35-9c1f-a94b9084823e" method="POST">
+							<div class="flex form"><input type="text" name="name" placeholder="Type your name here" required></div>
+							<div class="flex form"><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="Type your phone number here" required></div>
+							<div class="flex form"><input type="email" name="email" placeholder="Type your email address here" required></div>
+							<div class="flex form"><textarea rows = "6" cols = "1" name="message" placeholder="What kind of work can I do for you, and when is a good time to reach you?" required></textarea></div>
+							<div class="flex form"><button class="large send" type="submit">Submit</button></div>
+						</form>
+					</div>
 						<div class="col-12">
 							<hr />
 							<h3>Find me on ...</h3>

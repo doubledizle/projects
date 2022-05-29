@@ -295,6 +295,11 @@ input, select, textarea {
 		align-items: stretch;
 	}
 
+		.row.form {
+			justify-content: space-between;
+			margin-bottom: 2em;
+		}
+	
 		.row > * {
 			box-sizing: border-box;
 		}
@@ -1519,6 +1524,7 @@ input, select, textarea {
 	}
 
 	form input[type=text],
+	form input[type=tel],
 	form input[type=email],
 	form input[type=password],
 	form select,
@@ -1538,6 +1544,12 @@ input, select, textarea {
 		color: #bbb;
 		box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
 		width: 100%;
+		margin-top: 1em;
+		align-self: center;
+	}
+
+	form textarea {
+		margin-bottom: 1em;
 	}
 
 		form input[type=text]:focus,
@@ -1547,6 +1559,10 @@ input, select, textarea {
 		form textarea:focus {
 			background: #fafafa;
 			box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #43bff0;
+		}
+
+		form input[name=message] {
+			height: 10em;
 		}
 
 	form textarea {
@@ -1693,7 +1709,6 @@ input, select, textarea {
 		background-color: #43B3E0;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
-		max-width: 24em;
 	}
 
 		input[type="button"]:hover,
@@ -1721,6 +1736,11 @@ input, select, textarea {
 		.button.large {
 			font-size: 1.5em;
 			letter-spacing: -0.025em;
+		}
+
+		button.large.send {
+			padding: 0.5em;
+			width: 30%;
 		}
 
 		input[type="button"].alt,
@@ -2024,17 +2044,19 @@ input, select, textarea {
 
 			.wrapper.style4 form input[type=text],
 			.wrapper.style4 form input[type=password],
+			.wrapper.style4 form input[type=email],
 			.wrapper.style4 form select,
 			.wrapper.style4 form textarea {
 				border: none;
-				background: #282828;
+				background: #ffffff;
 			}
 
 				.wrapper.style4 form input[type=text]:focus,
 				.wrapper.style4 form input[type=password]:focus,
+				.wrapper.style4 form input[type=email]:focus,
 				.wrapper.style4 form select:focus,
 				.wrapper.style4 form textarea:focus {
-					background: #252525;
+					background: #dcdcdc;
 				}
 
 /* Nav */
@@ -2301,8 +2323,7 @@ input, select, textarea {
 			.button {
 				text-align: center;
 				font-size: 1.2em;
-				width: 100%;
-				padding: 1em 0 1em 0;
+				padding: 1em 0.5em 1em 0.5em;
 			}
 
 				input[type="button"].large,
