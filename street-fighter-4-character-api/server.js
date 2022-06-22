@@ -146,6 +146,9 @@ const fighters = {
     'birthPlace': 'Japan',
     'fightingStyle': 'Martial arts rooted in Ansatsuken',
   },
+  'unknown': {
+    'name': 'Unknown',
+  },
 }
 
 app.get('/', (req, res)=>{
