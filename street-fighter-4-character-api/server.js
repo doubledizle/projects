@@ -6,115 +6,141 @@ const PORT = 8000
 app.use(cors())
 
 const fighters = {
-  'Ryu': {
+  'ryu': {
+    'name': 'Ryu',
     'firstGame': 'Street Fighter',
-    'birthDate': 'July 21, 1964',
+    'birthDate': 'July 21',
     'birthPlace': 'Japan',
     'fightingStyle': 'Ansatsuken',
   },
-  'Ken': {
+  'ken': {
+    'name': 'Ken',
     'firstGame': 'Street Fighter',
-    'birthDate': 'February 14, 1965',
+    'birthDate': 'February 14',
     'birthPlace': 'USA',
     'fightingStyle': 'Ansatsuken',
   },
-  'Chun Li': {
+  'chun li': {
+    'name': 'Chun Li',
     'firstGame': 'Street Fighter II',
-    'birthDate': 'March 1, 1968',
+    'birthDate': 'March 1',
     'birthPlace': 'China',
     'fightingStyle': 'Chinese martial arts',
   },
-  'E. Honda': {
+  'e. honda': {
+    'name': 'E. Honda',
     'firstGame': 'Street Fighter II',
-    'birthDate': 'November 3, 1960',
+    'birthDate': 'November 3',
     'birthPlace': 'Japan',
     'fightingStyle': 'Japanese sumo wrestling',
   },
-  'Blanka': {
+  'e honda': {
+    'name': 'E. Honda',
     'firstGame': 'Street Fighter II',
-    'birthDate': 'February 12, 1966',
+    'birthDate': 'November 3',
+    'birthPlace': 'Japan',
+    'fightingStyle': 'Japanese sumo wrestling',
+  },
+  'blanka': {
+    'name': 'Blanka',
+    'firstGame': 'Street Fighter II',
+    'birthDate': 'February 12',
     'birthPlace': 'Brazil',
     'fightingStyle': 'Feral movement, electric attacks',
   },
-  'Zangief': {
+  'zangief': {
+    'name': 'Zangief',
     'firstGame': 'Street Fighter II',
-    'birthDate': 'June 1, 1956',
+    'birthDate': 'June 1',
     'birthPlace': 'Russia',
     'fightingStyle': 'Mix of Russian and American pro wrestling',
   },
-  'Guile': {
+  'guile': {
+    'name': 'Guile',
     'firstGame': 'Street Fighter II',
-    'birthDate': 'December 23, 1960',
+    'birthDate': 'December 23',
     'birthPlace': 'USA',
     'fightingStyle': 'Martial arts and professional wrestling',
   },
-  'Dhalsim': {
+  'dhalsim': {
+    'name': 'Dhalsim',
     'firstGame': 'Street Fighter II',
     'birthDate': 'November 22, 1952',
     'birthPlace': 'India',
-    'fightingStyle': 'Esoteric Yoga',
+    'fightingStyle': 'Esoteri',
   },
-  'Balrog': {
+  'balrog': {
+    'name': 'Balrog',
     'firstGame': 'Street Fighter II (unplayable boss)',
-    'birthDate': 'September 4, 1968',
+    'birthDate': 'September 4',
     'birthPlace': 'USA',
     'fightingStyle': 'Boxing',
   },
-  'Vega': {
+  'vega': {
+    'name': 'Vega',
     'firstGame': 'Street Fighter II (unplayable boss)',
-    'birthDate': 'January 27, 1967',
+    'birthDate': 'January 27',
     'birthPlace': 'Spain',
     'fightingStyle': 'Spanish Ninjutsu',
   },
-  'Sagat': {
+  'sagat': {
+    'name': 'Sagat',
     'firstGame': 'Street Fighter II (unplayable boss)',
-    'birthDate': 'July 2, 1955',
+    'birthDate': 'July 2',
     'birthPlace': 'Thailand',
     'fightingStyle': 'Muay Thai',
   },
-  'M. Bison': {
+  'm. bison': {
+    'name': 'M. Bison',
     'firstGame': 'Street Fighter II (unplayable boss)',
     'birthDate': 'January 17',
     'birthPlace': 'Unknown',
     'fightingStyle': 'Psycho Power',
   },
-  'Abel': {
+  'abel': {
+    'name': 'Abel',
     'firstGame': 'Street Fighter IV',
     'birthDate': 'November 5',
     'birthPlace': 'Raised in France (actual birthplace unknown)',
     'fightingStyle': 'Mixed martial arts based on Judo',
   },
-  'C. Viper': {
+  'c. viper': {
+    'name': 'C. Viper',
     'firstGame': 'Street Fighter IV',
     'birthDate': 'July 18',
     'birthPlace': 'USA',
     'fightingStyle': 'Secret spy gadgets',
   },
-  'Rufus': {
+  'rufus': {
+    'name': 'Rufus',
     'firstGame': 'Street Fighter IV',
     'birthDate': 'July 30',
     'birthPlace': 'USA',
     'fightingStyle': 'What he thinks are Karate and Kung Fu',
   },
-  'El Fuerte': {
+  'el fuerte': {
+    'name': 'El Fuerte',
     'firstGame': 'Street Fighter IV',
     'birthDate': 'October 29',
     'birthPlace': 'Mexico',
     'fightingStyle': 'Lucha Libre',
   },
-  'Seth': {
+  'seth': {
+    'name': 'Seth',
     'firstGame': 'Street Fighter IV',
     'birthDate': 'Unknown',
     'birthPlace': 'Unknown',
     'fightingStyle': 'Transcendent fighting style beyond human comprehension',
   },
-  'Akuma': {
+  'akuma': {
+    'name': 'Akuma',
     'firstGame': 'Street Fighter II Turbo',
     'birthDate': 'Unknown',
     'birthPlace': 'Japan',
     'fightingStyle': 'Satsui no Hado, Ansatsuken',
   },
-  'Gouken': {
+  'gouken': {
+    'name': 'Gouken',
     'firstGame': 'Street Fighter Alpha (unplayable boss)',
     'birthDate': 'Unknown',
     'birthPlace': 'Japan',
@@ -138,4 +164,3 @@ app.get('/api/:fighterName', (req, res) =>{
 app.listen(process.env.PORT || PORT, ()=>{
   console.log(`The server is now running on port ${PORT}`)
 })
-.catch(error => console.error(error))
