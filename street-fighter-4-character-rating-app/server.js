@@ -33,7 +33,7 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
   app.get('/', async (req, res) => {
     charCollection.find().toArray()
     .then(characters => {
-      console.log(characters)
+      // console.log(characters)
       res.render('index.ejs', { characters: characters })
     })
     .catch(error => console.error(error))
@@ -48,6 +48,23 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
     })
     .catch(error => console.error(error))
   })
+
+  app.put('/addLike', (request, response) => {
+    db.collection('characters').updateOne({charName: request.body.itemFromJS},{
+      
+      $inc: {likes: 1}
+    
+    },{
+        sort: {likes: -1},
+        upsert: false
+    })
+    .then(result => {
+        console.log(`${request.body.itemFromJS} liked`)
+        response.json(`${request.body.itemFromJS} liked`)
+    })
+    .catch(error => console.error(error))
+
+})
 
 
   /* Listen
