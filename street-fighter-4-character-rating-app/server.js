@@ -31,7 +31,7 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
   //
 
   app.get('/', async (req, res) => {
-    charCollection.find().toArray()
+    charCollection.find().sort({likes: -1, name: 1}).toArray()
     .then(characters => {
       // console.log(characters)
       res.render('index.ejs', { characters: characters })
@@ -50,12 +50,11 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
   })
 
   app.put('/addLike', (request, response) => {
-    db.collection('characters').updateOne({charName: request.body.itemFromJS},{
+    charCollection.updateOne({charName: request.body.itemFromJS},{
       
       $inc: {likes: 1}
     
     },{
-        sort: {likes: -1},
         upsert: false
     })
     .then(result => {
