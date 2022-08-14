@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: rgba(111,0,0,1);
+  background-color: rgb(27, 77, 140);
 }
 
 section {
@@ -32,4 +32,21 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+span {
+  font-size: 1.15rem;
+}
+
+.fa-arrow-up {
+  color: rgba(233, 140, 0);
+}
+
+.fa-arrow-up:hover {
+  cursor: pointer;
+}
+
+.character {
+  font-weight: bold;
+  color: rgba(111,0,0,1);
 }

@@ -14,10 +14,10 @@
     <h1 data-position="header">Street Fighter 4 Characters</h1>
     <h2>Rate them as many times as you wish</h2>
 
-    <ul class="characters">
+    <ul class='characters'>
       <% for(var i = 0; i < characters.length; i++) {%>
-      <li class="character">
-        <span><%= characters[i].charName %></span> - Likes: 
+      <li>
+        <span class='character'><%= characters[i].charName %></span> <span>- Likes: </span>
         <span><%= characters[i].likes %></span>
         <span class='fa fa-arrow-up'></span>
       </li>
