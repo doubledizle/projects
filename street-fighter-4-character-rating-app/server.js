@@ -6,6 +6,10 @@ const MongoClient = require('mongodb').MongoClient
 const app = express()
 const PORT = 5000
 
+require('dotenv').config()
+
+const dbConnectionStr = process.env.DB_STRING
+let db, charCollection
 
 /* Promise syntax
 */
@@ -13,22 +17,21 @@ const PORT = 5000
 app.use(cors())
 app.use(express.json())
 
-MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6e.mongodb.net/?retryWrites=true&w=majority')
+MongoClient.connect(dbConnectionStr)
   .then(client => {
+    db = client.db('sf4-characters-api')
+    charCollection = db.collection('characters')
     console.log('Connected to Database')
-    const db = client.db('sf4-characters-api')
-    const charCollection = db.collection('characters')
-  //
+  })
 
   /* Middlewares
   */
 
   app.set('view engine', 'ejs')
-    app.use(cors())
-    app.use(bodyParser.urlencoded({ extended: true }))
-    app.use(bodyParser.json())
-    app.use(express.static('public'))
-  //
+  app.use(cors())
+  app.use(bodyParser.urlencoded({ extended: true }))
+  app.use(bodyParser.json())
+  app.use(express.static('public'))
 
   app.get('/', async (req, res) => {
     charCollection.find().sort({likes: -1, name: 1}).toArray()
@@ -62,8 +65,7 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
         response.json(`${request.body.itemFromJS} liked`)
     })
     .catch(error => console.error(error))
-
-})
+  })
 
 
   /* Listen
@@ -72,6 +74,3 @@ MongoClient.connect('mongodb+srv://doubledizle:1MXG007DmVr3Kt7q@sonicboom.eelbv6
   app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The server is now running on port ${PORT}`)
   })
-
-})
-.catch(error => console.error(error))
