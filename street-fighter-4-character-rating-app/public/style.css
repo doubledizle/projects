@@ -39,10 +39,14 @@ span {
 }
 
 .fa-arrow-up {
-  color: rgba(233, 140, 0);
+  color: rgb(0, 233, 12);
 }
 
-.fa-arrow-up:hover {
+.fa-arrow-down {
+  color: rgb(233, 16, 0);
+}
+
+.fa-arrow-up:hover, .fa-arrow-down:hover  {
   cursor: pointer;
 }
 
